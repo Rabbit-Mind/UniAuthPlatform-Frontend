@@ -1,0 +1,30 @@
+{
+  "name": "@vben/request",
+  "version": "5.5.2",
+  "homepage": "https://github.com/Rabbit-Mind/UniAuthFrontend",
+  "bugs": "https://github.com/Rabbit-Mind/UniAuthFrontend/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rabbit-Mind/UniAuthFrontend.git",
+    "directory": "packages/effects/request"
+  },
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
+  },
+  "dependencies": {
+    "@vben/locales": "workspace:*",
+    "@vben/utils": "workspace:*",
+    "axios": "catalog:"
+  },
+  "devDependencies": {
+    "axios-mock-adapter": "catalog:"
+  }
+}

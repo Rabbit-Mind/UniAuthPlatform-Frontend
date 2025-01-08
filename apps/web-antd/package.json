@@ -1,0 +1,58 @@
+{
+  "name": "uni-auth-frontend",
+  "version": "0.0.1",
+  "homepage": "https://github.com/RamidLab",
+  "bugs": "https://github.com/Rabbit-Mind/UniAuthFrontend/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rabbit-Mind/UniAuthFrontend.git",
+    "directory": "apps/web-antd"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "ramid",
+    "email": "ramid@qq.com",
+    "url": "https://github.com/RamidLab"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "pnpm vite build --mode production",
+    "build:analyze": "pnpm vite build --mode analyze",
+    "dev": "pnpm vite --mode development",
+    "preview": "vite preview",
+    "typecheck": "vue-tsc --noEmit --skipLibCheck"
+  },
+  "imports": {
+    "#/*": "./src/*"
+  },
+  "dependencies": {
+    "@ant-design/icons-vue": "^7.0.1",
+    "@fast-crud/fast-bpmn": "catalog:",
+    "@fast-crud/fast-crud": "catalog:",
+    "@fast-crud/fast-extends": "catalog:",
+    "@fast-crud/ui-antdv4": "catalog:",
+    "@fast-crud/ui-interface": "catalog:",
+    "@vben/access": "workspace:*",
+    "@vben/common-ui": "workspace:*",
+    "@vben/constants": "workspace:*",
+    "@vben/hooks": "workspace:*",
+    "@vben/icons": "workspace:*",
+    "@vben/layouts": "workspace:*",
+    "@vben/locales": "workspace:*",
+    "@vben/plugins": "workspace:*",
+    "@vben/preferences": "workspace:*",
+    "@vben/request": "workspace:*",
+    "@vben/stores": "workspace:*",
+    "@vben/styles": "workspace:*",
+    "@vben/types": "workspace:*",
+    "@vben/utils": "workspace:*",
+    "@vueuse/core": "catalog:",
+    "ant-design-vue": "catalog:",
+    "dayjs": "catalog:",
+    "epic-designer": "^0.9.28",
+    "lodash-es": "^4.17.21",
+    "pinia": "catalog:",
+    "vue": "catalog:",
+    "vue-router": "catalog:"
+  }
+}
