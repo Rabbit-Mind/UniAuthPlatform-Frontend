@@ -1,7 +1,7 @@
 {
   "folders": [
     {
-      "name": "uni-auth-frontend",
+      "name": "uni-auth-frontend-antd",
       "path": "apps/web-antd",
     },
     {
