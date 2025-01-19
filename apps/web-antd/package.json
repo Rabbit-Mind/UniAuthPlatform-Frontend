@@ -1,11 +1,11 @@
 {
-  "name": "uni-auth-frontend-antd",
+  "name": "uni-auth-platform-frontend-antd",
   "version": "0.0.1",
   "homepage": "https://github.com/RamidLab",
-  "bugs": "https://github.com/Rabbit-Mind/UniAuthFrontend/issues",
+  "bugs": "https://github.com/Rabbit-Mind/UniAuthPlatform-Frontend/issues",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Rabbit-Mind/UniAuthFrontend.git",
+    "url": "git+https://github.com/Rabbit-Mind/UniAuthPlatform-Frontend.git",
     "directory": "apps/web-antd"
   },
   "license": "MIT",

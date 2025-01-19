@@ -14,7 +14,7 @@ permissions:
 
 jobs:
   close-issues:
-    if: github.repository == 'Rabbit-Mind/UniAuthFrontend'
+    if: github.repository == 'Rabbit-Mind/UniAuthPlatform-Frontend'
     runs-on: ubuntu-latest
     steps:
       # 关闭未活动的 Issues

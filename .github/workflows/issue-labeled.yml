@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   reply-labeled:
-    if: github.repository == 'Rabbit-Mind/UniAuthFrontend'
+    if: github.repository == 'Rabbit-Mind/UniAuthPlatform-Frontend'
     runs-on: ubuntu-latest
     steps:
       - name: remove enhancement pending

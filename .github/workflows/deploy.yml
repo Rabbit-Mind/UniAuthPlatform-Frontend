@@ -8,7 +8,7 @@ on:
 jobs:
 #  deploy-docs-ftp:
 #    name: Deploy Push Docs Ftp
-#    if: github.actor != 'dependabot[bot]' && !contains(github.event.head_commit.message, '[skip ci]') && github.repository == 'Rabbit-Mind/UniAuthFrontend'
+#    if: github.actor != 'dependabot[bot]' && !contains(github.event.head_commit.message, '[skip ci]') && github.repository == 'Rabbit-Mind/UniAuthPlatform-Frontend'
 #    runs-on: ubuntu-latest
 #    steps:
 #      - name: Checkout code
@@ -32,7 +32,7 @@ jobs:
 
   deploy-antd-ftp:
     name: Deploy Push Antd Ftp
-    if: github.actor != 'dependabot[bot]' && !contains(github.event.head_commit.message, '[skip ci]') && github.repository == 'Rabbit-Mind/UniAuthFrontend'
+    if: github.actor != 'dependabot[bot]' && !contains(github.event.head_commit.message, '[skip ci]') && github.repository == 'Rabbit-Mind/UniAuthPlatform-Frontend'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code

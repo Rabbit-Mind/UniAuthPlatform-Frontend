@@ -15,7 +15,7 @@ permissions:
 jobs:
   build:
     name: Create Release
-    if: github.repository == 'Rabbit-Mind/UniAuthFrontend'
+    if: github.repository == 'Rabbit-Mind/UniAuthPlatform-Frontend'
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -77,4 +77,4 @@ jobs:
       #     token: ${{ secrets.GITHUB_TOKEN }}
       #     generateReleaseNotes: "true"
       #     body: |
-      #       > Please refer to [CHANGELOG.md](https://github.com/Rabbit-Mind/UniAuthFrontend/blob/main/CHANGELOG.md) for details.
+      #       > Please refer to [CHANGELOG.md](https://github.com/Rabbit-Mind/UniAuthPlatform-Frontend/blob/main/CHANGELOG.md) for details.

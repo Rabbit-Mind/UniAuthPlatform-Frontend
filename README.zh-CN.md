@@ -1,8 +1,8 @@
-<div align="center"> <a href="https://github.com/Rabbit-Mind/UniAuthFrontend"> <img alt="VbenAdmin Logo" width="215" src="https://user.imyrs.net/d/lzb/RabbitMind/logo.png?sign=jBMCR7E9C9HNZ_Dj-8mHNIizxe28pTjkVtkQMyEZ_kU=:0"> </a> <br> <br>
+<div align="center"> <a href="https://github.com/Rabbit-Mind/UniAuthPlatform-Frontend"> <img alt="VbenAdmin Logo" width="215" src="https://user.imyrs.net/d/lzb/RabbitMind/logo.png?sign=jBMCR7E9C9HNZ_Dj-8mHNIizxe28pTjkVtkQMyEZ_kU=:0"> </a> <br> <br>
 
-[![license](https://img.shields.io/github/license/Rabbit-Mind/UniAuthFrontend)](LICENSE)
+[![license](https://img.shields.io/github/license/Rabbit-Mind/UniAuthPlatform-Frontend)](LICENSE)
 
-<h1>Rabbit Mind 通用认证</h1>
+<h1>Rabbit Mind 通用认证平台</h1>
 </div>
 
 [![作者](https://img.shields.io/badge/作者-Ramid-orange)](https://github.com/RamidLab) ![技术](https://img.shields.io/badge/技术-Vue、Typescript-blue)
@@ -11,7 +11,7 @@
 
 ## 简介
 
-Rabbit Mind 通用认证是一个基于 Vben Admin 5.X 模板框架二次开发的通用认证前端解决方案。该项目旨在为开发者提供一个可复用、灵活、高效的认证模块，可以快速集成用户认证、权限控制等功能，并通过与后端服务的对接，实现安全的用户管理和认证流程。
+Rabbit Mind 通用认证平台的前端是一个基于 Vben Admin 5.X 模板框架二次开发的通用认证前端解决方案。该项目旨在为开发者提供一个可复用、灵活、高效的认证模块，可以快速集成用户认证、权限控制等功能，并通过与后端服务的对接，实现安全的用户管理和认证流程。
 
 ## 特性
 
@@ -30,7 +30,7 @@ Rabbit Mind 通用认证是一个基于 Vben Admin 5.X 模板框架二次开发�
 - 获取项目代码
 
 ```bash
-git clone https://github.com/Rabbit-Mind/UniAuthFrontend.git
+git clone https://github.com/Rabbit-Mind/UniAuthPlatform-Frontend.git
 ```
 
 - 安装依赖
@@ -57,11 +57,11 @@ pnpm build
 
 ## 更新日志
 
-[CHANGELOG](https://github.com/Rabbit-Mind/UniAuthFrontend/releases)
+[CHANGELOG](https://github.com/Rabbit-Mind/UniAuthPlatform-Frontend/releases)
 
 ## 如何贡献
 
-非常欢迎你的加入！[提一个 Issue](https://github.com/Rabbit-Mind/UniAuthFrontend/issues/new/choose) 或者提交一个 Pull Request。
+非常欢迎你的加入！[提一个 Issue](https://github.com/Rabbit-Mind/UniAuthPlatform-Frontend/issues/new/choose) 或者提交一个 Pull Request。
 
 **Pull Request:**
 

@@ -6,7 +6,7 @@ on:
 
 jobs:
   stale:
-    if: github.repository == 'Rabbit-Mind/UniAuthFrontend'
+    if: github.repository == 'Rabbit-Mind/UniAuthPlatform-Frontend'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/stale@v9

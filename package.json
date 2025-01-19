@@ -1,5 +1,5 @@
 {
-  "name": "uni-auth-frontend",
+  "name": "uni-auth-platform-frontend",
   "version": "0.0.1",
   "private": true,
   "keywords": [
@@ -14,9 +14,9 @@
     "vue vben admin pro",
     "vue3"
   ],
-  "homepage": "https://github.com/Rabbit-Mind/UniAuthFrontend",
-  "bugs": "https://github.com/Rabbit-Mind/UniAuthFrontend/issues",
-  "repository": "Rabbit-Mind/UniAuthFrontend.git",
+  "homepage": "https://github.com/Rabbit-Mind/UniAuthPlatform-Frontend",
+  "bugs": "https://github.com/Rabbit-Mind/UniAuthPlatform-Frontend/issues",
+  "repository": "Rabbit-Mind/UniAuthPlatform-Frontend.git",
   "license": "MIT",
   "author": {
     "name": "ramid",
@@ -27,7 +27,7 @@
   "scripts": {
     "build": "cross-env NODE_OPTIONS=--max-old-space-size=8192 turbo build",
     "build:analyze": "turbo build:analyze",
-    "build:antd": "pnpm run build --filter=uni-auth-frontend-antd",
+    "build:antd": "pnpm run build --filter=uni-auth-platform-frontend-antd",
     "build:docker": "./scripts/deploy/build-local-docker-image.sh",
     "build:docs": "pnpm run build --filter=@vben/docs",
     "changeset": "pnpm exec changeset",
@@ -39,7 +39,7 @@
     "clean": "node ./scripts/clean.mjs",
     "commit": "czg",
     "dev": "turbo-run dev",
-    "dev:antd": "pnpm -F uni-auth-frontend-antd run dev",
+    "dev:antd": "pnpm -F uni-auth-platform-frontend-antd run dev",
     "dev:docs": "pnpm -F @vben/docs run dev",
     "format": "vsh lint --format",
     "lint": "vsh lint",

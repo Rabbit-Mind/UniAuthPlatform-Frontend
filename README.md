@@ -1,8 +1,8 @@
-<div align="center"> <a href="https://github.com/Rabbit-Mind/UniAuthFrontend"> <img alt="VbenAdmin Logo" width="215" src="https://user.imyrs.net/d/lzb/RabbitMind/logo.png?sign=jBMCR7E9C9HNZ_Dj-8mHNIizxe28pTjkVtkQMyEZ_kU=:0"> </a> <br> <br>
+<div align="center"> <a href="https://github.com/Rabbit-Mind/UniAuthPlatform-Frontend"> <img alt="Rabbit Mind Logo" width="215" src="https://user.imyrs.net/d/lzb/RabbitMind/logo.png?sign=jBMCR7E9C9HNZ_Dj-8mHNIizxe28pTjkVtkQMyEZ_kU=:0"> </a> <br> <br>
 
-[![license](https://img.shields.io/github/license/Rabbit-Mind/UniAuthFrontend)](LICENSE)
+[![license](https://img.shields.io/github/license/Rabbit-Mind/UniAuthPlatform-Frontend)](LICENSE)
 
-<h1>Rabbit Mind Universal Authentication</h1>
+<h1>Rabbit Mind Universal Authentication Platform Frontend</h1>
 </div>
 
 [![Author](https://img.shields.io/badge/Author-Ramid-orange)](https://github.com/RamidLab) ![Tech](https://img.shields.io/badge/Tech-Vue、Typescript-blue)
@@ -11,7 +11,7 @@
 
 ## Introduction
 
-Rabbit Mind Universal Authentication is a universal authentication frontend solution built on top of the Vben Admin 5.X template framework through secondary development. The project aims to provide developers with a reusable, flexible, and efficient authentication module that can be quickly integrated with user authentication, access control, and other features, enabling secure user management and authentication workflows in modern web applications.
+The Rabbit Mind universal authentication platform front-end is a universal authentication front-end solution developed based on the Vben Admin 5.X template framework. This project aims to provide developers with a reusable, flexible, and efficient authentication module that can quickly integrate user authentication, permission control and other functions, and realize secure user management and authentication processes through docking with back-end services.
 
 ## Feature
 
@@ -30,7 +30,7 @@ Rabbit Mind Universal Authentication is a universal authentication frontend solu
 - Get the project code
 
 ```bash
-git clone https://github.com/Rabbit-Mind/UniAuthFrontend.git
+git clone https://github.com/Rabbit-Mind/UniAuthPlatform-Frontend.git
 ```
 
 - Installation dependencies
@@ -57,11 +57,11 @@ pnpm build
 
 ## Change Log
 
-[CHANGELOG](https://github.com/Rabbit-Mind/UniAuthFrontend/releases)
+[CHANGELOG](https://github.com/Rabbit-Mind/UniAuthPlatform-Frontend/releases)
 
 ## How to contribute
 
-You are very welcome to join！[Raise an issue](https://github.com/Rabbit-Mind/UniAuthFrontend/issues/new/choose) Or submit a Pull Request。
+You are very welcome to join！[Raise an issue](https://github.com/Rabbit-Mind/UniAuthPlatform-Frontend/issues/new/choose) Or submit a Pull Request。
 
 **Pull Request:**
 

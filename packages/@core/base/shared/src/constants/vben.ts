@@ -1,7 +1,8 @@
 /**
  * @zh_CN GITHUB 仓库地址
  */
-export const UA_GITHUB_URL = 'https://github.com/Rabbit-Mind/UniAuthFrontend';
+export const UA_GITHUB_URL =
+  'https://github.com/Rabbit-Mind/UniAuthPlatform-Frontend';
 
 /**
  * @zh_CN 文档地址

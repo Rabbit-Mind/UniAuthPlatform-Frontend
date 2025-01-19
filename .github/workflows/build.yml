@@ -19,7 +19,7 @@ permissions:
 
 jobs:
   post-update:
-    if: github.repository == 'Rabbit-Mind/UniAuthFrontend'
+    if: github.repository == 'Rabbit-Mind/UniAuthPlatform-Frontend'
     # if: ${{ github.actor == 'dependabot[bot]' }}
     runs-on: ${{ matrix.os }}
     strategy:

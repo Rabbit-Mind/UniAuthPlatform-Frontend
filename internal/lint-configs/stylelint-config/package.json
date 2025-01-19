@@ -2,11 +2,11 @@
   "name": "@vben/stylelint-config",
   "version": "5.5.2",
   "private": true,
-  "homepage": "https://github.com/Rabbit-Mind/UniAuthFrontend",
-  "bugs": "https://github.com/Rabbit-Mind/UniAuthFrontend/issues",
+  "homepage": "https://github.com/Rabbit-Mind/UniAuthPlatform-Frontend",
+  "bugs": "https://github.com/Rabbit-Mind/UniAuthPlatform-Frontend/issues",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Rabbit-Mind/UniAuthFrontend.git",
+    "url": "git+https://github.com/Rabbit-Mind/UniAuthPlatform-Frontend.git",
     "directory": "internal/lint-configs/stylelint-config"
   },
   "license": "MIT",

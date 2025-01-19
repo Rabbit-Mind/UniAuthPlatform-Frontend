@@ -10,7 +10,7 @@ on:
 jobs:
   main:
     name: Semantic Pull Request
-    if: github.repository == 'Rabbit-Mind/UniAuthFrontend'
+    if: github.repository == 'Rabbit-Mind/UniAuthPlatform-Frontend'
     runs-on: ubuntu-latest
     steps:
       - name: Validate PR title

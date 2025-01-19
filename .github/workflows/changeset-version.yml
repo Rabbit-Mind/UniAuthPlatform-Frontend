@@ -18,8 +18,8 @@ env:
 
 jobs:
   version:
-    if: (github.event.pull_request.merged || github.event_name == 'workflow_dispatch') && github.actor != 'dependabot[bot]' && !contains(github.event.head_commit.message, '[skip ci]') && github.repository == 'Rabbit-Mind/UniAuthFrontend'
-    # if: github.repository == 'Rabbit-Mind/UniAuthFrontend'
+    if: (github.event.pull_request.merged || github.event_name == 'workflow_dispatch') && github.actor != 'dependabot[bot]' && !contains(github.event.head_commit.message, '[skip ci]') && github.repository == 'Rabbit-Mind/UniAuthPlatform-Frontend'
+    # if: github.repository == 'Rabbit-Mind/UniAuthPlatform-Frontend'
     timeout-minutes: 15
     runs-on: ubuntu-latest
 
