@@ -126,11 +126,11 @@ watch(
   <BasicLayout @clear-preferences-and-logout="handleLogout">
     <template #user-dropdown>
       <UserDropdown
-        :avatar
+        :avatar="userStore.userInfo?.avatar"
         :menus
-        :text="userStore.userInfo?.realName"
-        description="ann.vben@gmail.com"
-        tag-text="Pro"
+        :text="userStore.userInfo?.username"
+        :description="`${$t('layouts.basic.userId')}: ${userStore.userInfo?.userId}`"
+        :tag-text="userStore.userInfo?.roles?.toString()"
         @logout="handleLogout"
       />
     </template>
