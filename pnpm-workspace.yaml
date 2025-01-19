@@ -10,8 +10,7 @@ packages:
   - packages/business/*
   - apps/*
   - scripts/*
-  - docs
-  - playground
+#  - docs
 catalog:
   '@fast-crud/fast-bpmn': ^2.1.15
   '@fast-crud/fast-crud': ^1.24.2
