@@ -75,13 +75,37 @@ function loadLocalesMapFromDir(
     }
   }
 
-  // Convert raw locale data into async import functions
+  // 将原始 locale 数据转换为异步加载函数
   for (const [locale, files] of Object.entries(localesRaw)) {
     localesMap[locale] = async () => {
       const messages: Record<string, any> = {};
-      for (const [fileName, importFn] of Object.entries(files)) {
-        messages[fileName] = ((await importFn()) as any)?.default;
+
+      // 加载所有文件并合并为完整的层次结构
+      for (const [filePath, importFn] of Object.entries(files)) {
+        const keys = filePath.split('/'); // 根据 '/' 分割路径
+        if (keys.length === 0) {
+          continue; // 如果 keys 为空，跳过当前文件
+        }
+
+        const lastKey = keys.pop(); // 安全提取最后一个键
+        if (!lastKey) {
+          continue; // 确保 lastKey 不为 undefined
+        }
+
+        let current = messages;
+
+        // 遍历路径层次，生成嵌套对象
+        for (const key of keys) {
+          if (!current[key]) {
+            current[key] = {};
+          }
+          current = current[key];
+        }
+
+        // 加载文件内容
+        current[lastKey] = ((await importFn()) as any)?.default;
       }
+
       return { default: messages };
     };
   }
