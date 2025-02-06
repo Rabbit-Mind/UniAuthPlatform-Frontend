@@ -36,7 +36,7 @@ git clone https://github.com/Rabbit-Mind/UniAuthPlatform-Frontend.git
 - Installation dependencies
 
 ```bash
-cd UniAuthFrontend
+cd UniAuthPlatform-Frontend
 
 corepack enable
 
