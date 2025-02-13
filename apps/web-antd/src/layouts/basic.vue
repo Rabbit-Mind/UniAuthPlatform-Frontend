@@ -128,7 +128,7 @@ watch(
       <UserDropdown
         :avatar="userStore.userInfo?.avatar"
         :menus
-        :text="userStore.userInfo?.username"
+        :text="userStore.userInfo?.nickName"
         :description="`${$t('layouts.basic.userId')}: ${userStore.userInfo?.userId}`"
         :tag-text="userStore.userInfo?.roles?.toString()"
         @logout="handleLogout"
