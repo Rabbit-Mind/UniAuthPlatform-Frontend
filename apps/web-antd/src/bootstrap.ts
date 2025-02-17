@@ -13,6 +13,7 @@ import { setupAntd } from 'epic-designer/dist/ui/antd';
 import { $t, setupI18n } from '#/locales';
 import setupFastBpmn from '#/plugin/fast-bpmn/setup-fast-bpmn';
 import { setupFastCrud } from '#/plugin/fast-crud/setup-fast-crud';
+import { useIndexStore } from '#/store';
 
 import { initComponentAdapter } from './adapter/component';
 import App from './app.vue';
@@ -29,6 +30,9 @@ async function bootstrap(namespace: string) {
 
   // 配置 pinia-tore
   await initStores(app, { namespace });
+
+  const indexStore = useIndexStore();
+  await indexStore.setSiteSettings();
 
   // 安装权限指令
   registerAccessDirective(app);

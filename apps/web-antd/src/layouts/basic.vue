@@ -17,8 +17,10 @@ import { preferences } from '@vben/preferences';
 import { useAccessStore, useUserStore } from '@vben/stores';
 import { openWindow } from '@vben/utils';
 
+import { VbenLogo } from '@vben-core/shadcn-ui';
+
 import { $t } from '#/locales';
-import { useAuthStore } from '#/store';
+import { useAuthStore, useIndexStore } from '#/store';
 import LoginForm from '#/views/_core/authentication/login.vue';
 
 const notifications = ref<NotificationItem[]>([
@@ -120,10 +122,20 @@ watch(
     immediate: true,
   },
 );
+
+const indexStore = useIndexStore();
+const siteSettings = indexStore.getSiteSettings;
 </script>
 
 <template>
   <BasicLayout @clear-preferences-and-logout="handleLogout">
+    <template #logo>
+      <VbenLogo
+        v-if="preferences.logo.enable"
+        :src="siteSettings.logo"
+        :text="siteSettings.title"
+      />
+    </template>
     <template #user-dropdown>
       <UserDropdown
         :avatar="userStore.userInfo?.avatar"
