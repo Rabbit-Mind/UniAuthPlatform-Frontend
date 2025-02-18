@@ -52,9 +52,11 @@ export const useAuthStore = defineStore('auth', () => {
         if (accessStore.loginExpired) {
           accessStore.setLoginExpired(false);
         } else {
-          onSuccess
-            ? await onSuccess?.()
-            : await router.push(userInfo.homePath || DEFAULT_HOME_PATH);
+          const jump_path: any =
+            router.currentRoute.value.fullPath === LOGIN_PATH
+              ? userInfo.homePath || DEFAULT_HOME_PATH
+              : router.currentRoute.value.query?.redirect;
+          onSuccess ? await onSuccess?.() : await router.push(jump_path);
         }
 
         if (userInfo?.nickName) {
