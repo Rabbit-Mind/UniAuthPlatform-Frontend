@@ -15,7 +15,7 @@ import { useAccessStore } from '@vben/stores';
 // import { message } from 'ant-design-vue';
 import { useUi } from '@fast-crud/fast-crud';
 
-import { useAuthStore } from '#/store';
+import { $t } from '#/locales';
 
 import { refreshTokenApi } from './core';
 
@@ -32,15 +32,12 @@ function createRequestClient(baseURL: string) {
   async function doReAuthenticate() {
     console.warn('Access token or refresh token is invalid or expired. ');
     const accessStore = useAccessStore();
-    const authStore = useAuthStore();
     accessStore.setAccessToken(null);
     if (
       preferences.app.loginExpiredMode === 'modal' &&
       accessStore.isAccessChecked
     ) {
       accessStore.setLoginExpired(true);
-    } else {
-      await authStore.logout();
     }
   }
 
@@ -105,11 +102,19 @@ function createRequestClient(baseURL: string) {
       const errorMessage = responseData?.error ?? responseData?.message ?? '';
       // 如果没有错误信息，则会根据状态码进行提示
       // message.error(errorMessage || msg);
-      ui.notification.error({
-        // placement: 'top',
-        message: errorMessage || msg,
-        // duration: 1,
-      });
+      if (responseData?.code === 401) {
+        ui.notification.error({
+          // placement: 'top',
+          message: $t('authentication.error_status.loginInvalid'),
+          // duration: 1,
+        });
+      } else {
+        ui.notification.error({
+          // placement: 'top',
+          message: errorMessage || msg,
+          // duration: 1,
+        });
+      }
     }),
   );
 

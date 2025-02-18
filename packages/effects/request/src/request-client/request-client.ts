@@ -113,6 +113,9 @@ class RequestClient {
       }
       return response as T;
     } catch (error: any) {
+      if (error.response.status === 401) {
+        return error.response ? error.response.data : error;
+      }
       throw error.response ? error.response.data : error;
     }
   }
