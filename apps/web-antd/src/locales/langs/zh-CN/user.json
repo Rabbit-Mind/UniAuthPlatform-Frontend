@@ -1,0 +1,7 @@
+{
+  "roles": {
+    "superAdmin": "超级管理员",
+    "tenantAdmin": "租户管理员",
+    "other": "普通人员"
+  }
+}

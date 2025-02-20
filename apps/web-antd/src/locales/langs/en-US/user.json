@@ -1,0 +1,7 @@
+{
+  "roles": {
+    "superAdmin": "Super Admin",
+    "tenantAdmin": "Tenant Admin",
+    "other": "Ordinary Personnel"
+  }
+}

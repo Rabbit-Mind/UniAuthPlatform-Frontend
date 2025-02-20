@@ -54,7 +54,7 @@ export const useAuthStore = defineStore('auth', () => {
         } else {
           const jump_path: any =
             router.currentRoute.value.fullPath === LOGIN_PATH
-              ? userInfo.homePath || DEFAULT_HOME_PATH
+              ? userInfo?.homePath || DEFAULT_HOME_PATH
               : router.currentRoute.value.query?.redirect;
           onSuccess ? await onSuccess?.() : await router.push(jump_path);
         }
@@ -99,6 +99,21 @@ export const useAuthStore = defineStore('auth', () => {
   async function fetchUserInfo() {
     let userInfo: null | UserInfo = null;
     userInfo = await getUserInfoApi();
+    if (userInfo && userInfo?.roles?.includes('PLATFORM-ADMIN')) {
+      userInfo.label = 'user.roles.superAdmin';
+    } else if (
+      userInfo &&
+      userInfo?.roles?.includes('TENANT-ADMIN') &&
+      !userInfo?.roles?.includes('PLATFORM-ADMIN')
+    ) {
+      userInfo.label = 'user.roles.tenantAdmin';
+    } else if (
+      userInfo &&
+      !userInfo?.roles?.includes('TENANT-ADMIN') &&
+      !userInfo?.roles?.includes('PLATFORM-ADMIN')
+    ) {
+      userInfo.label = 'user.roles.other';
+    }
     userStore.setUserInfo(userInfo);
     return userInfo;
   }

@@ -142,7 +142,7 @@ const siteSettings = indexStore.getSiteSettings;
         :menus
         :text="userStore.userInfo?.nickName"
         :description="`${$t('layouts.basic.userId')}: ${userStore.userInfo?.userId}`"
-        :tag-text="userStore.userInfo?.roles?.toString()"
+        :tag-text="$t(userStore.userInfo?.label ?? '')"
         @logout="handleLogout"
       />
     </template>
