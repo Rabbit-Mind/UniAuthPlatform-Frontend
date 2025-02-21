@@ -2,9 +2,15 @@
 import type { NotificationItem } from '@vben/layouts';
 
 import { computed, ref, watch } from 'vue';
+import { useRouter } from 'vue-router';
 
 import { AuthenticationLoginExpiredModal } from '@vben/common-ui';
-import { RM_DOC_URL, UA_GITHUB_URL } from '@vben/constants';
+import {
+  DEFAULT_HOME_PATH,
+  LOGIN_PATH,
+  RM_DOC_URL,
+  UA_GITHUB_URL,
+} from '@vben/constants';
 import { useWatermark } from '@vben/hooks';
 import { BookOpenText, CircleHelp, MdiGithub } from '@vben/icons';
 import {
@@ -19,6 +25,7 @@ import { openWindow } from '@vben/utils';
 
 import { VbenLogo } from '@vben-core/shadcn-ui';
 
+import { checkTokenApi } from '#/api';
 import { $t } from '#/locales';
 import { useAuthStore, useIndexStore } from '#/store';
 import LoginForm from '#/views/_core/authentication/login.vue';
@@ -57,6 +64,7 @@ const notifications = ref<NotificationItem[]>([
 const userStore = useUserStore();
 const authStore = useAuthStore();
 const accessStore = useAccessStore();
+const router = useRouter();
 const { destroyWatermark, updateWatermark } = useWatermark();
 const showDot = computed(() =>
   notifications.value.some((item) => !item.isRead),
@@ -122,6 +130,31 @@ watch(
     immediate: true,
   },
 );
+
+const tokenCheckInterval = setInterval(check_token, 5000);
+
+async function check_token() {
+  try {
+    const is_token: any = await checkTokenApi();
+    if (is_token.code === 401) {
+      if (router.currentRoute.value.fullPath === DEFAULT_HOME_PATH) {
+        await router.push(LOGIN_PATH);
+      } else {
+        router.currentRoute.value.query.redirect =
+          router.currentRoute.value.fullPath;
+        await router.push(
+          `${LOGIN_PATH}?redirect=${decodeURIComponent(
+            router.currentRoute.value.fullPath,
+          )}`,
+        );
+      }
+
+      clearInterval(tokenCheckInterval);
+    }
+  } catch {
+    // 不作任何处理，否则会重复报错
+  }
+}
 
 const indexStore = useIndexStore();
 const siteSettings = indexStore.getSiteSettings;
